@@ -191,3 +191,6 @@ COMPILING ON MAC
 ================
 
 project file for OSX compile is in code/macosx/Quake3.pbproj
+
+first time commit to readme
+:)
