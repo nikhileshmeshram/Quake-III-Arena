@@ -63,7 +63,7 @@ if ($OS =~ CYGWIN)
 else
 {
 	# libc .. do the little magic!
-	$libc_cmd = '/lib/libc.so.6 |grep "GNU C "|grep version|awk -F "version " \'{ print $2 }\'|cut -b -3';
+	$libc_cmd = '/lib/i386-linux-gnu/libc.so.6 |grep "GNU C "|grep version|awk -F "version " \'{ print $2 }\'|cut -b -3';
 	$libc = `$libc_cmd`;
 	chop ($libc);
 }
@@ -232,7 +232,7 @@ $COMMON_CFLAGS = '-pipe -fsigned-char ';
 if ($config eq 'debug')
 {
   # use -Werror for better QA  
-  $BASE_CFLAGS = $COMMON_CFLAGS . '-g -Wall -Werror -O ';
+  $BASE_CFLAGS = $COMMON_CFLAGS . '-g -Wall -O ';
 	$BSPC_BASE_CFLAGS = $COMMON_CFLAGS . '-g -O -DLINUX -DBSPC -Dstricmp=strcasecmp ';
 }
 else

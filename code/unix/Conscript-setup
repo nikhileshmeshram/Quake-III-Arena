@@ -2,6 +2,7 @@
 
 Import qw( INSTALL_BASEDIR );
 
+ print("Testing 123 123 123 \n");
 $env = new cons(
   # add this path so setup script finds brandelf
   ENV => { PATH => $ENV{PATH} . ":" . $ENV{HOME} . "./usr/bin", },

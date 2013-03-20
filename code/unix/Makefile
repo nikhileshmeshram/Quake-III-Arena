@@ -81,8 +81,8 @@ DLL_ONLY=false
 
 
 ifeq ($(PLATFORM),linux)
-
-  ifneq (,$(findstring libc6,$(shell if [ -e /lib/libc.so.6* ];then echo libc6;fi)))
+  echo "Linux wooo hooo"
+  ifneq (,$(findstring libc6,$(shell if [ -e /lib/i386-linux-gnu/libc.so.6* ];then echo libc6;fi)))
     GLIBC=-glibc
   else
     GLIBC=
